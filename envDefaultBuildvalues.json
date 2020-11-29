@@ -1,0 +1,304 @@
+{
+    "commonEnvValues": {
+        "environment": "dci",
+        "as3rpm": "f5-appsvcs-3.20.0-3.noarch.rpm",
+        "dorpm": "f5-declarative-onboarding-1.15.0-3.noarch.rpm",
+        "tsrpm": "f5-telemetry-1.14.0-2.noarch.rpm",
+        "modules": {
+            "mod1": {
+                "module": "ltm",
+                "level": "nominal"
+            },
+            "mod2": {
+                "module": "afm",
+                "level": "nominal"
+            },
+            "mod3": {
+                "module": "avr",
+                "level": "nominal"
+            }
+        },
+        "ntp": {
+            "hosts": [
+                "10.10.10.10",
+                "10.10.20.10",
+                "10.10.30.10"
+            ],
+            "timezone": "GMT"
+        },
+        "dns": {
+            "hosts": [
+                "1.1.1.1",
+                "8.8.8.8"
+            ]
+        },
+        "snmp": {
+            "agentTrap": "false",
+            "bigipTraps": "false",
+            "agentaddresses": {
+                "tcp6": "161",
+                "udp6": "161"
+            },
+            "allowedAddresses": [
+                "10.0.0.0/8",
+                "192.168.0.0/16",
+                "0.0.0.0/1",
+                "128.0.0.0/1"
+            ],
+            "communities": {
+                "community_1": {
+                    "access": "ro",
+                    "communityName": "community1",
+                    "source": "all"
+                },
+                "community_2": {
+                    "access": "rw",
+                    "communityName": "community2",
+                    "source": "all"
+                }
+            },
+            "sysContact": "NOC 877-555-5555",
+            "sysLocation": " DataCenter3.0, Datacenter VE Guest",
+            "traps": {
+                "trap1": {
+                    "community": "community1",
+                    "host": "10.10.70.1",
+                    "version": "2c",
+                    "port": "162",
+                    "network": "other"
+                },
+                "trap2": {
+                    "community": "community2",
+                    "host": "10.10.80.1",
+                    "version": "2c",
+                    "port": "162",
+                    "network": "other"
+                }
+            }
+        },
+        "dbVariables": {
+            "var1": {
+                "name": "ui.system.preferences.recordsperscreen",
+                "value": "100"
+            },
+            "var2": {
+                "name": "ui.system.preferences.startscreen",
+                "value": "network_map"
+            },
+            "var3": {
+                "name": "config.auditing.forward.destination",
+                "value": "10.99.9.1"
+            },
+            "var4": {
+                "name": "config.auditing.forward.sharedsecret",
+                "value": "nosoupforyou"
+            },
+            "var5": {
+                "name": "config.auditing.forward.type",
+                "value": "tacacs+"
+            },
+            "var6": {
+                "name": "config.auditing",
+                "value": "enable"
+            },
+            "var7": {
+                "name": "tm.fw.defaultrule.log",
+                "value": "enable"
+            },
+            "var8": {
+                "name": "tm.fw.globaldefaultrule.log",
+                "value": "enable"
+            },
+            "var9": {
+                "name": "tm.fw.stageddefaultrule.log",
+                "value": "enable"
+            },
+            "var10": {
+                "name": "tm.fw.stagedglobaldefaultrule.log",
+                "value": "enable"
+            },
+            "var11": {
+                "name": "statemirror.clustermirroring",
+                "value": "between"
+            },
+            "var12": {
+                "name": "dos.auto.threshold.learnalways",
+                "value": "false"
+            },
+            "var13": {
+                "name": "ui.advisory.enabled",
+                "value": "true"
+            },
+            "var14": {
+                "name": "ui.advisory.color",
+                "value": "red"
+            },
+            "var15": {
+                "name": "ui.advisory.text",
+                "value": "Automated apps only, no manual changes"
+            }
+        },
+        "sshd": {
+            "sshdBanner": {
+                "text": "******** Use of this system is restricted to official business. *******",
+                "state": "enabled"
+            },
+            "sshdAccess": [
+                "10.0.0.0/8",
+                "192.168.0.0/16",
+                "0.0.0.0/1",
+                "128.0.0.0/1"
+            ],
+            "inactivityTimeout": "900"
+        },
+        "syslog": {
+            "syslog1": {
+                "name": "remotesyslog1",
+                "host": "10.8.1.1"
+            },
+            "syslog2": {
+                "name": "remotesyslog2",
+                "host": "10.9.1.1"
+            }
+        },
+        "httpd": {
+            "ciphers": [
+                "ECDHE-RSA-AES256-GCM-SHA384",
+                "ECDHE-RSA-AES256-SHA384",
+                "DHE-RSA-AES256-GCM-SHA384",
+                "DHE-RSA-AES256-SHA256",
+                "DHE-RSA-AES256-SHA",
+                "ECDH-RSA-AES256-GCM-SHA384",
+                "ECDH-RSA-AES256-SHA384",
+                "ECDH-RSA-AES256-SHA",
+                "AES256-GCM-SHA384",
+                "AES256-SHA256",
+                "AES256-SHA"
+            ],
+            "protocol": "TLSv1.2",
+            "httpdAccess": [
+                "10.0.0.0/8",
+                "192.168.0.0/16",
+                "0.0.0.0/1",
+                "128.0.0.0/1"
+            ],
+            "guiBanner": {
+                "text": "gui Banner: Use of this system is restricted to official business.",
+                "state": "enabled"
+            }
+        },
+        "tacacs": {
+            "sourceType": "local",
+            "authentication": "use-all-servers",
+            "protocol": "ip",
+            "secret": "nosoupforyou",
+            "servers": [
+                "10.10.90.1",
+                "10.10.90.2"
+            ],
+            "service": "ppp",
+            "authRemoteRole": {
+                "RO": {
+                    "name": "RO",
+                    "attribute": "F5-LTM-User-Info-1=RO",
+                    "console": "tmsh",
+                    "lineOrder": "5",
+                    "role": "auditor",
+                    "userPartition": "all",
+                    "remoteAccess": "true"
+                },
+                "RW": {
+                    "name": "RW",
+                    "attribute": "F5-LTM-User-Info-1=RW",
+                    "console": "tmsh",
+                    "lineOrder": "1",
+                    "role": "admin",
+                    "userPartition": "all",
+                    "remoteAccess": "false"
+                }
+            },
+            "authSource": "local"
+        },
+        "cliSettings": {
+            "preferencePrompt": "host user status current-folder config-sync-status",
+            "idleTimeout": "15",
+            "service": "number"
+        },
+        "consoleInactivity": "15",
+        "softwareUpdate": {
+            "autoCheck": "disabled",
+            "autoPhoneHome": "disabled"
+        },
+        "bigstartRemove": [
+            "named",
+            "zxfrd"
+        ],
+        "bgp": {
+            "routeProtocol": "BGP",
+            "bgpTemplate": {
+                "bgp_asn": "65005",
+                "router_id": "10.10.190.1",
+                "ASN_IN": "65010",
+                "ASN_OUT": "65001",
+                "leaf_outside": "10.10.110.1",
+                "PASSWORD_OUT": "nosoupforyou",
+                "leaf_inside": "10.10.110.2",
+                "PASSWORD_IN": "nosoupforyou",
+                "VIP_networks": "10.253.0.0"
+            },
+            "imish": [
+                "imish",
+                "enable",
+                "conf t ",
+                "no service password-encryption",
+                "!",
+                "log file /var/log/zebos.log",
+                "no banner motd",
+                "!",
+                "bgp extended-asn-cap",
+                "!",
+                "router bgp 65005",
+                "bgp router-id 10.10.190.1",
+                "bgp graceful-restart restart-time 120",
+                "redistribute kernel route-map RM_HealthInject_PREFIX_LIST",
+                "timers bgp 15 45",
+                "neighbor PeerGroup_Fabric_IN peer-group",
+                "neighbor PeerGroup_Fabric_IN soft-reconfiguration inbound",
+                "neighbor PeerGroup_Fabric_IN route-map RouteMap_to_INSIDE out",
+                "neighbor PeerGroup_Fabric_IN remote-as 65010",
+                "neighbor PeerGroup_Fabric_OUT peer-group",
+                "neighbor PeerGroup_Fabric_OUT soft-reconfiguration inbound",
+                "neighbor PeerGroup_Fabric_OUT route-map  RouteMap_to_OUTSIDE out",
+                "neighbor PeerGroup_Fabric_OUT remote-as 65001",
+                "neighbor 10.10.110.1 peer-group PeerGroup_Fabric_OUT",
+                "neighbor 10.10.110.1 description outside_peering",
+                "neighbor 10.10.110.2 peer-group PeerGroup_Fabric_OUT",
+                "neighbor 10.10.110.2 description outside_peering",
+                "neighbor 10.10.110.101 peer-group PeerGroup_Fabric_IN",
+                "neighbor 10.10.110.101 description inside_peering",
+                "neighbor 10.10.110.102 peer-group PeerGroup_Fabric_IN",
+                "neighbor 10.10.110.102 description inside_peering",
+                "!",
+                "ip as-path access-list AccessList_to-INSIDE permit ^65001 *",
+                "ip as-path access-list AccessList_to-OUTSIDE permit ^$",
+                "ip as-path access-list AccessList_to-OUTSIDE permit ^65264$",
+                "!",
+                "ip prefix-list PrefixL_VIP_NETWORKS seq 10 permit 10.10.100.0/25 ge 32",
+                "!",
+                "route-map RouteMap_to_OUTSIDE permit 10",
+                " match as-path AccessList_to-OUTSIDE",
+                "!",
+                "route-map RouteMap_to_INSIDE permit 10",
+                " match as-path AccessList_to-INSIDE",
+                "!",
+                "route-map RM_HealthInject_PREFIX_LIST permit 50",
+                " match ip address prefix-list PrefixL_VIP_NETWORKS",
+                "!",
+                "exit",
+                "exit",
+                "wr mem",
+                "exit"
+            ]
+        }
+    }
+}
