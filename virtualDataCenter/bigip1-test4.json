@@ -1,0 +1,44 @@
+{
+	"base": {
+		"mgmt": {
+			"ip":"10.254.29.109",
+            "hostname": "bigip1-test4.example1.com"
+		},
+		"haPeer": {
+			"primary": true,
+			"peerName": "dcibigipB.example.com",
+			"haIp": "172.100.4.251"
+		},
+		"externalIp": {
+			"name": "externalIP",
+			"ip": "192.168.252.14",
+			"cidr": "/24",
+			"vlan": "external"
+		},
+		"externalFloatIp": {
+			"name": "externalFloatIP",
+			"ip": "172.100.1.4",
+			"cidr": "/24",
+			"vlan": "external"
+		},
+		"internalRedIp": {
+			"name": "internalRedIP",
+			"ip": "192.168.252.15",
+			"cidr": "/24",
+			"vlan": "internalRed"
+		},
+		"internalRedFloatIp": {
+			"name": "internalRedFloatIP",
+			"ip": "172.100.2.4",
+			"cidr": "/24",
+			"vlan": "internalRed"
+		},
+		"haIp": {
+			"name": "haIP",
+			"ip": "192.168.254.8",
+			"cidr": "/24",
+			"vlan": "ha"
+		},
+		"dataCenter": "virtualDataCenter"
+	}
+}
