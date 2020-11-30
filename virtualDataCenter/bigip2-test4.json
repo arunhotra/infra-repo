@@ -1,5 +1,8 @@
 {
 	"base": {
+		"timestamp": {
+			"epoch":"1606700786"
+		},
 		"mgmt": {
 			"ip":"10.254.29.110",
             "hostname": "bigip2-test4.example1.com"
