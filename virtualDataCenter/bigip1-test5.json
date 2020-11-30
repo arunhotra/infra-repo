@@ -1,7 +1,7 @@
 {
 	"base": {
 		"timestamp": {
-			"epoch":"1606764005"
+			"epoch":"1606769573"
 		},
 		"mgmt": {
 			"ip":"10.254.29.104",
@@ -20,7 +20,7 @@
 		},
 		"externalFloatIp": {
 			"name": "externalFloatIP",
-			"ip": "172.100.1.4",
+			"ip": "192.168.251.17192.168.251.17",
 			"cidr": "/24",
 			"vlan": "external"
 		},
@@ -32,7 +32,7 @@
 		},
 		"internalRedFloatIp": {
 			"name": "internalRedFloatIP",
-			"ip": "172.100.2.4",
+			"ip": "192.168.252.21192.168.252.21",
 			"cidr": "/24",
 			"vlan": "internalRed"
 		},
