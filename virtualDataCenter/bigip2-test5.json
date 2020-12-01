@@ -1,7 +1,7 @@
 {
 	"base": {
 		"timestamp": {
-			"epoch":"1606833276"
+			"epoch":"1606833597"
 		},
 		"mgmt": {
 			"ip":"10.254.29.103",
@@ -9,7 +9,6 @@
 		},
 		"haPeer": {
 			"primary": true,
-			"peerName": "dcibigipB.example.com",
 			"haIp": "192.168.254.5"
 		},
 		"externalIp": {
@@ -20,7 +19,7 @@
 		},
 		"externalFloatIp": {
 			"name": "externalFloatIP",
-			"ip": "192.168.251.22",
+			"ip": "192.168.251.23",
 			"cidr": "/24",
 			"vlan": "external"
 		},
@@ -32,7 +31,7 @@
 		},
 		"internalRedFloatIp": {
 			"name": "internalRedFloatIP",
-			"ip": "192.168.252.26",
+			"ip": "192.168.252.27",
 			"cidr": "/24",
 			"vlan": "internalRed"
 		},
