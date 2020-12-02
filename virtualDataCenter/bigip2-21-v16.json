@@ -1,0 +1,46 @@
+{
+	"base": {
+		"timestamp": {
+			"epoch":"1606934991"
+		},
+		"mgmt": {
+			"ip":"10.254.29.119",
+            "hostname": "bigip2-21-v16.example1.com"
+		},
+		"haPeer": {
+			"primary": "True",
+			"haIp": "192.168.254.16"
+		},
+		"externalIp": {
+			"name": "externalIP",
+			"ip": "192.168.251.19",
+			"cidr": "/24",
+			"vlan": "external"
+		},
+		"externalFloatIp": {
+			"name": "externalFloatIP",
+			"ip": "192.168.251.20",
+			"cidr": "/24",
+			"vlan": "external"
+		},
+		"internalRedIp": {
+			"name": "internalRedIP",
+			"ip": "192.168.252.19",
+			"cidr": "/24",
+			"vlan": "internalRed"
+		},
+		"internalRedFloatIp": {
+			"name": "internalRedFloatIP",
+			"ip": "192.168.252.20",
+			"cidr": "/24",
+			"vlan": "internalRed"
+		},
+		"haIp": {
+			"name": "haIP",
+			"ip": "192.168.254.17",
+			"cidr": "/24",
+			"vlan": "ha"
+		},
+		"dataCenter": "virtualDataCenter"
+	}
+}
