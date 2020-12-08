@@ -10,8 +10,8 @@
                 "level": "nominal"
             },
             "mod2": {
-                "module": "afm",
-                "level": "nominal"
+                "module": "management",
+                "level": "medium"
             },
             "mod3": {
                 "module": "avr",
